@@ -1,0 +1,42 @@
+@use '../abstracts/colors';
+@use '../abstracts/breakpoints';
+
+.input {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin-bottom: 13px;
+
+  input {
+    padding: 10px 16px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    border: 1px solid colors.$grey-200;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: colors.$black-700;
+    background: colors.$white;
+
+    &::placeholder {
+      color: colors.$grey-400;
+    }
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    width: 100%;
+  }
+}
+
+.input__warn {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: colors.$red;
+}

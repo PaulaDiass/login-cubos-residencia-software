@@ -1,0 +1,140 @@
+@use '../abstracts/colors';
+@use '../abstracts/fonts';
+@use '../abstracts/breakpoints';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+
+  font-family: fonts.$font-rubik;
+
+  background: colors.$blue-400;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a,
+button {
+  all: unset;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  padding: 0 10vw;
+
+  font-family: fonts.$font-rubik;
+
+  background: colors.$blue-400;
+
+  @media (max-width: breakpoints.$laptop) {
+    padding: 0 5vw;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    padding: 0 3vw;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    align-items: flex-start;
+
+    height: 100%;
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  width: 100%;
+  max-width: 1140px;
+
+  @media (max-width: breakpoints.$mobile) {
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .page__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+
+    height: 100%;
+    width: 100%;
+
+    @media (max-width: breakpoints.$mobile) {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 30px;
+    }
+  }
+}
+
+.form-area {
+  width: 359px;
+  padding: 35px 75px;
+
+  border-radius: 8px;
+  background: colors.$blue-200;
+
+  @media (max-width: breakpoints.$tablet) {
+    padding: 35px 40px;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    width: 100%;
+    padding: 68px 68px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 17px;
+    text-align: center;
+
+    color: colors.$black-300;
+  }
+
+  .MuiAlert-filled {
+    margin-top: 2rem;
+    border-radius: 8px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  a {
+    margin-bottom: 12px;
+
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+
+    color: colors.$blue-700;
+  }
+
+  .link--last {
+    margin-bottom: 21px;
+  }
+}

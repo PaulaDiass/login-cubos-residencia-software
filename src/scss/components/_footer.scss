@@ -1,0 +1,36 @@
+@use '../abstracts/colors';
+@use '../abstracts/breakpoints';
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+  padding: 7px 0;
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  background: colors.$blue-500;
+
+  @media (max-width: breakpoints.$mobile) {
+    padding: 7px;
+    width: 100%;
+  }
+
+  span {
+    cursor: pointer;
+
+    margin-right: 4px;
+    margin-left: 4px;
+
+    color: colors.$blue-700;
+
+    &:first-child {
+      color: colors.$black-700;
+    }
+  }
+}

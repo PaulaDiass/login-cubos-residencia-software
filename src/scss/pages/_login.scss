@@ -1,0 +1,50 @@
+@use "../abstracts/colors";
+
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  width: 100%;
+
+  .login__content {
+    display: flex;
+    gap: 12px;
+
+    height: 368px;
+  }
+}
+
+.login__form-area {
+  height: 100%;
+  padding: 35px 75px 0 75px;
+
+  border-radius: 8px;
+  background: colors.$blue-200;
+
+  h1 {
+    margin-bottom: 10px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    color: colors.$black-300;
+  }
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin-bottom: 21px;
+
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+
+    color: colors.$blue-700;
+  }
+}

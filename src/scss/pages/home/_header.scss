@@ -1,0 +1,95 @@
+@use '../../abstracts/colors';
+@use '../../abstracts/breakpoints';
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.7rem 10vw;
+
+  z-index: 2;
+
+  background: colors.$blue-600;
+  color: colors.$white;
+  font-size: 1.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: breakpoints.$laptop) {
+    padding: 0.7rem 5vw;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    padding: 0.7rem 3vw;
+  }
+
+  &__logo {
+    width: 88px;
+    height: 34px;
+
+    background: colors.$white;
+    border-radius: 26px;
+  }
+
+  &__nav {
+    flex: 1;
+
+    @media (max-width: breakpoints.$tablet) {
+      display: none;
+    }
+
+    &-menu {
+      display: flex;
+      gap: 2rem;
+      width: 100%;
+      padding: 0 2.4rem;
+
+      .menu__item {
+        cursor: pointer;
+
+        &--active {
+          font-weight: bold;
+        }
+
+        &--last {
+          position: relative;
+          right: 0;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 1rem 1.5rem;
+    border-radius: 26px;
+
+    background-color: colors.$blue-900;
+
+    @media (max-width: breakpoints.$tablet) {
+      display: none;
+    }
+  }
+
+  &__menu-button {
+    @media (min-width: calc(breakpoints.$tablet - 1px)) {
+      display: none;
+    }
+
+    @media (max-width: breakpoints.$tablet) {
+      display: block;
+      font-size: 3.2rem;
+      color: colors.$white;
+    }
+  }
+}

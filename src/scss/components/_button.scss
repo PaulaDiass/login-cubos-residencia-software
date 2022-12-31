@@ -1,0 +1,21 @@
+@use '../abstracts/colors';
+@use '../abstracts/breakpoints';
+
+.button {
+  width: 207px;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: 1px solid colors.$blue-700;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+
+  color: colors.$white;
+  background: colors.$blue-700;
+
+  @media (max-width: breakpoints.$tablet) {
+    width: 100%;
+  }
+}

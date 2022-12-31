@@ -1,0 +1,85 @@
+@use '../../abstracts/colors';
+@use '../../abstracts/breakpoints';
+
+@mixin border-divider {
+  border-top: 1px solid colors.$blue-100;
+  padding: 1.5rem 0 0 0;
+}
+
+.profile {
+  background: colors.$white;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  width: 16rem;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+
+  @media (max-width: breakpoints.$tablet) {
+    display: none;
+  }
+
+  &--mobile {
+    width: 100vw;
+    height: 100vh;
+    padding: 7.8rem 4rem 4rem 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    background: colors.$white;
+  }
+
+  &__avatar {
+    width: 100%;
+    border-radius: 50%;
+
+    @media (max-width: breakpoints.$tablet) {
+      width: 80%;
+    }
+  }
+
+  &__title {
+    @include border-divider();
+    line-height: 15px;
+
+    &-name {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: colors.$blue-700;
+      margin-bottom: 1rem;
+    }
+    &-bio {
+      font-size: 1.2rem;
+      color: colors.$grey-400;
+    }
+  }
+
+  &__info {
+    font-size: 1.2rem;
+    color: colors.$blue-700;
+
+    @media (max-width: breakpoints.$tablet) {
+      align-self: flex-start;
+    }
+
+    @include border-divider();
+
+    .profile__item {
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+}

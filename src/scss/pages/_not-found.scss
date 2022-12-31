@@ -1,0 +1,25 @@
+@use '../abstracts/colors';
+
+.not-found__title {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 32px;
+  text-align: center;
+
+  color: colors.$black-700;
+}
+
+.not-found__subtitle {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 20px;
+  text-align: center;
+
+  color: colors.$black-700;
+
+  a {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: colors.$blue-700;
+  }
+}
